@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color:var(--neutral--);
+    background-color:var(--base_bg);
 }
 
 header {
@@ -28,7 +28,7 @@ header {
     gap:16px;
     width:76px;
     height:20px;
-    color: var(--text1--);
+    color: var(--theme_text);
     &:hover {
         cursor:pointer;
         background:transparent;
@@ -52,8 +52,8 @@ header {
 }
 .search {
     margin-top:30px;  
-    background-color: var(--neutral-base--);
-    color: var(--search_field--);
+    background-color: var(--search-bg);
+    color: var(--search-text);
     >img{
         width:24px;
         }
@@ -71,11 +71,11 @@ header {
         width:107px;
         font-weight: 700;
         border-radius: 10px;
-        color: var(--search-text--);
-        background-color:var(--button_bckgrnd);
+        color: #ffffff;
+        background-color:var(--search_btn);
         &:hover{
             cursor:pointer;
-            background-color: var(--toggle-search--);
+            background-color: var(--search-btn_hov);
         }
     }
     height:69px;
@@ -89,14 +89,14 @@ header {
     padding-right: 24px;
     margin-bottom: 20px;
     &:has(:focus-visible){
-            border: 2px solid var(--button_bckgrnd);
+            border: 2px solid var(--search-outline);
         }
 }
 .display_area{
     width:100%;
     height:420px;
     border-radius:15px;
-    background-color: var(--neutral-base--);
+    background-color: var(--search-bg);
 
 }
 
@@ -105,37 +105,37 @@ header {
         font-weight: 600;
         line-height: 150%;
         letter-spacing: -2%;
-        color: var(--fact-head--);
+        color: var(--head_text);
     }
     >p {
         font-weight: 400;
         font-size: var(--small);
         letter-spacing: 0;
         line-height: 150%;
-        color: var(--para1--);
+        color: var(--para-text);
     }
     .rowhead{
-        background-color: blue;
+        background-color:var(--table_head);
     }
     >table{
     >caption{
         font-size: 18px;
         font-weight: 600;
-        color: var(--th-head----);
+        color: var(--table-cap);
     }
         width:100%;
         color:black;
         table-layout: fixed;
         border-collapse: collapse;
-        border: 5px solid white;
+        border: 5px solid var(--border);
         border-radius: 20px;  
     }
     
     .planets-class{
-        background-color: lightblue;
+        background-color: var(--row_head);
     }
     .planets-data{
-        background-color: whitesmoke;
+        background-color: var(--table_data);
     }
 
 }
@@ -152,7 +152,7 @@ footer{
         font-size: 16px;
         font-weight:500;
     }
-    color: var(--search_field--);
+    color: var(--footer-text);
     height:74px;
     display:flex;
     justify-content: space-between;
@@ -185,20 +185,24 @@ footer{
         content:"dark";
     }
     color-scheme:light;
-    --white--: #ffffff;
-    --black: #0f2a44;
-    --neutral--: #F6F8Ff;
-    --neutral-base--:#ffffff;
-    --text1--: #2b3442;
-    --toggle-theme--: #2b3442;
-    --theme-button--:#4b6a9b;
-    --button_bckgrnd:#0079ff;
-    --search-text--:#ffffff;
-    --toggle-search--: #60abff;
-    --search_field--: #4b6a9b;
-    --fact-head--:#164baf;
-    --para1--:#0f2a44;
-    --th-head--:#0f2a44;
+    --base_bg:#f6f8ff;
+    --theme_text:#4b6a9b;
+    --search_icon:#6079ff;
+    --search-text:#4b6a9b;
+    --search-outline:#0079FF;
+    --search_btn:#0079FF;
+    --search-btn_hov:#60ABFF;
+    --search-bg:#ffffff;
+    --head_text:#164baf;
+    --para-text:#0f2a44;
+    --table-cap:#0f2a44;
+    --table_head:#164baf;
+    --thead_text:#ffffff;
+    --row_head:#d1e3ff;
+    --table_data:#f2f7ff;
+    --border:#ffffff;
+    --footer-text:#4B6A9B;
+
 }
 /* themes settings dark theme */
 
@@ -210,16 +214,21 @@ footer{
         content:"light"
     }
     color-scheme:dark;
-    --neutral--: #141D2f;
-    --neutral-base--:#1E2A47;
-    --text1--: #90a4da;
-    --toggle-theme--: #ffffff;
-    --button_bckgrnd:#0079ff;
-    --toggle-search--: #60abff;
-    --search_field--: #90A4da;
-    --theme-button--:#90a4da;
-    --search-text--: #ffffff;
-    --fact-head--:#F0f1f2;
-    --para1--:#90a4d4;
-    --th-head--:#d1e3ff;
+    --base_bg:#141d2f;
+    --theme_text:#90a4da;
+    --search_icon:#60abff;
+    --search-text:#ffffff;
+    --search-outline:#0079FF;
+    --search_btn:#0079FF;
+    --search-btn_hov:#60ABFF;
+    --search-bg:#1e2a47;
+    --head_text:#f0f1f2;
+    --para-text:#90A4D4;
+    --table-cap:#d1e3ff;
+    --table_head:#141d2f;
+    --thead_text:#d1e3ff;
+    --row_head:#90a4da;
+    --table_data:#f2f7ff;
+    --border:#ffffff;
+    --footer-text:#D1E3FF;
 }
